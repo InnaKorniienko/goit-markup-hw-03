@@ -4,11 +4,28 @@
     --second-font-family: 'Raleway', sans-serif;
     --primery-text-color: #212121; 
     --second-text-color: #757575;
+    --primery-background-font: #E5E5E5;
+    --second-background-font: #F5F4FA;
 }
 
 body {
     font-family: var(--primery-font-family);
     color: var(--primery-text-color);
+}
+
+h1,h2,h3,h4,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
 }
 
 .list {
@@ -19,6 +36,14 @@ body {
     text-decoration: none;
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*======START COMPONENTS======*/
 .section-heading {
     font-weight: 700;
@@ -26,14 +51,26 @@ body {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
 
 .hidden-header {
-    color: #FFFFFF;
+    display: none;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 /*======END COMPONENTS======*/
 
 /*======START HEADER======*/
+.header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #FFFFFF;
+}
+
 .logo {
     font-family: var(--second-font-family);
     font-weight: 700;
@@ -41,6 +78,8 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    padding-left: 0;
+    margin-right: 93px;
 }
 
 .accent-header {
@@ -52,6 +91,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    color: inherit;
 }
 
 .contact-mail-header {
@@ -85,11 +125,35 @@ body {
     color: var(--accent-color);
 } 
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.contact-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact-info-item:not(:last-child){
+    margin-right: 50px;
+}
 /*======END HEADER======*/
 
 /*======START INFO SECTION======*/
 .hero {
     background: #2F303A;
+    padding: 280px 452px;
 }
 
 .info-section {
@@ -104,8 +168,7 @@ body {
 
 .button-order {
     font-family: var(--primery-font-family);
-    font-weight: 700;
-    font-size: 16px;
+    padding: 10px 32px;
     line-height: 1.87;
     display: flex;
     align-items: center;
@@ -116,11 +179,27 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /*======END INFO SECTION======*/
 
 /*======START BENEFITS SECTION======*/
+
+.benefits-section {
+    background: var(--primery-background-font);
+}
+
+.benefits-list {
+    display: flex;
+    align-content: center;
+}
+
+.benefits-item:not(:last-child) {
+    margin-right: 30px;
+}
 
 .benefits-heading {
     font-weight: 700;
@@ -128,6 +207,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 270px;
 }
 
 .benefits-text {
@@ -135,11 +216,29 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+    width: 270px;
 }
 
 /*======END BENEFITS SECTION======*/
 
+/*======START WORK SECTION======*/
+.work-section {
+    background: var(--primery-background-font);
+    align-content: center;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*======END WORK SECTION======*/
+
 /*======START TEAM SECTION======*/
+.team-section {
+    background: var(--second-background-font);
+    align-content: center;
+}
 .our-team-heading {
     font-weight: 500;
     font-size: 16px;
@@ -154,8 +253,32 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+    margin-top: 10px;
+}
+
+.team-list {
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.team-cards {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100%-120)/4;
+}
+
+.team-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid #FFFFFF;
+    border-top: none;
+    margin-left: 30px;
+    flex-basis: calc(100%-120)/4;
+
 }
 /*======END TEAM SECTION======*/
+
 
 /*======START FOOTER======*/
 
@@ -181,7 +304,7 @@ body {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .contact-mail-footer {
@@ -190,6 +313,7 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
 }
 
 .contact-tel-footer {
@@ -198,11 +322,32 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+}
+
+.footer-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.address {
+    margin-top: 20px;
 }
 
 /*======END FOOTER======*/
 
 /*======START PORTFOLIO======*/
+.portfolio-section {
+    background: var(--primery-background-font);
+    align-content: center;
+}
+.portfolio-list-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-right: 8px;
+    justify-content: center;
+}
 .portfolio-button {
     font-weight: 500;
     font-size: 16px;
@@ -210,6 +355,7 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     cursor: pointer;
+    border: none;
     }
 
 .portfolio-button:hover,
@@ -217,6 +363,30 @@ body {
     color: #FFFFFF;
     background: var(--accent-color);
 } 
+
+.portfolio-item-button {
+    padding: 6px 22px;
+    border-radius: 4px;
+}
+
+.portfolio-list {
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.portfolio-item {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc(100%-90)/3;
+}
+
+.portfolio-content {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none
+    flex-basis: calc(100%-90)/3;
+}
 
 .portfolio-heading {
     font-weight: 700;
