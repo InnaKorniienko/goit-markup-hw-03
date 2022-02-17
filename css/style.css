@@ -54,8 +54,15 @@ img {
     margin-bottom: 50px;
 }
 
-.hidden-header {
-    display: none;
+.visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
 }
 
 .section {
@@ -66,8 +73,9 @@ img {
 
 /*======START HEADER======*/
 .header {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px;
     background-color: #FFFFFF;
 }
 
@@ -153,7 +161,7 @@ img {
 /*======START INFO SECTION======*/
 .hero {
     background: #2F303A;
-    padding: 280px 452px;
+    padding: 200px 0px;
 }
 
 .info-section {
@@ -188,10 +196,6 @@ img {
 
 /*======START BENEFITS SECTION======*/
 
-.benefits-section {
-    background: var(--primery-background-font);
-}
-
 .benefits-list {
     display: flex;
     align-content: center;
@@ -223,13 +227,18 @@ img {
 
 /*======START WORK SECTION======*/
 .work-section {
-    background: var(--primery-background-font);
+    padding-top: 0px;
     align-content: center;
 }
 
 .work-list {
     display: flex;
     justify-content: space-between;
+}
+
+.our-work-item>img {
+    max-width: 100%;
+    height: auto;
 }
 
 /*======END WORK SECTION======*/
@@ -262,20 +271,16 @@ img {
     margin-top: -30px;
 }
 
-.team-cards {
+.our-team-item {
     margin-left: 30px;
     margin-top: 30px;
-    flex-basis: calc(100%-120)/4;
+    flex-basis: calc(100%-120)/4;  
+    background-color: #FFFFFF;
 }
 
 .team-content {
     padding-top: 30px;
     padding-bottom: 30px;
-    border: 1px solid #FFFFFF;
-    border-top: none;
-    margin-left: 30px;
-    flex-basis: calc(100%-120)/4;
-
 }
 /*======END TEAM SECTION======*/
 
@@ -283,10 +288,12 @@ img {
 /*======START FOOTER======*/
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background: #2F303A;
 }
 
-.logo {
+.logo-footer {
     font-family: var(--second-font-family);
     font-weight: 700;
     font-size: 26px;
@@ -313,7 +320,6 @@ img {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    margin-top: 9px;
 }
 
 .contact-tel-footer {
@@ -322,30 +328,23 @@ img {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    margin-top: 9px;
-}
-
-.footer-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 .address {
     margin-top: 20px;
 }
 
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 /*======END FOOTER======*/
 
 /*======START PORTFOLIO======*/
-.portfolio-section {
-    background: var(--primery-background-font);
-    align-content: center;
-}
 .portfolio-list-button {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    margin-right: 8px;
     justify-content: center;
 }
 .portfolio-button {
@@ -356,7 +355,14 @@ img {
     letter-spacing: 0.03em;
     cursor: pointer;
     border: none;
-    }
+    padding: 6px 22px;
+    border-radius: 4px;
+    background-color: var(--second-background-font);
+}
+
+.portfolio-item-button:not(:last-child){
+    margin-right: 8px;
+}
 
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -364,13 +370,9 @@ img {
     background: var(--accent-color);
 } 
 
-.portfolio-item-button {
-    padding: 6px 22px;
-    border-radius: 4px;
-}
-
 .portfolio-list {
     display: flex;
+    flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
 }
@@ -393,6 +395,7 @@ img {
     font-size: 18px;
     line-height: 2.00;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
 
 .portfolio-text {
